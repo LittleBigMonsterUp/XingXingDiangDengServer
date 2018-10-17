@@ -6,7 +6,7 @@ using System.Web;
 namespace VirtualityBusCard.Models
 {
     public class VirtualityBusCardUser
-    {
+    {     
 
          public int Id { get; set; }
 
