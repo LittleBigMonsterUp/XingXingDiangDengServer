@@ -14,8 +14,8 @@ namespace VirtualityBusCard.DAL
 
         private GenericRepository<VirtualityBusCardMessageUser> virtualityBusCardMessageUserRepository;
         private GenericRepository<VirtualityBusCardUser> virtualityBusCardUserRepository;
-      
-
+        private GenericRepository<WeChatAppletAppidAppSecret> weChatAppletAppidAppSecretRepository;
+        private GenericRepository<WeChatUser> weChatUserRepository;
         public GenericRepository<VirtualityBusCardMessageUser> VirtualityBusCardMessageUserRepository
         {
             get
@@ -38,7 +38,31 @@ namespace VirtualityBusCard.DAL
                 return virtualityBusCardUserRepository;
             }
         }
-      
+       public GenericRepository<WeChatAppletAppidAppSecret> WeChatAppletAppidAppSecretRepository
+        {
+            get
+            {
+                if(this.weChatAppletAppidAppSecretRepository==null)
+                {
+                    this.weChatAppletAppidAppSecretRepository = new GenericRepository<WeChatAppletAppidAppSecret>(context);
+                }
+                return weChatAppletAppidAppSecretRepository;
+            }
+
+        }
+        public GenericRepository<WeChatUser> WeChatUserRepository
+        {
+            get
+            {
+                if (this.weChatUserRepository == null)
+                {
+                    this.weChatUserRepository = new GenericRepository<WeChatUser>(context);
+                }
+                return weChatUserRepository;
+            }
+
+        }
+
         public object SysUserRepository { get; internal set; }
         public object UserRleRepository { get; internal set; }
         #region Save & Dispose

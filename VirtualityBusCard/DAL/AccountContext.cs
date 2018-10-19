@@ -17,6 +17,9 @@ namespace VirtualityBusCard.DAL
         }
         public DbSet<VirtualityBusCardUser> VirtualityBusCardUser { get; set; }
         public DbSet<VirtualityBusCardMessageUser> VirtualityBusCardMessageUser { get; set; }
+        public DbSet<WeChatAppletAppidAppSecret> WeChatAppletAppidAppSecret { get; set; }
+        public DbSet<WeChatUser> WeChatUser { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

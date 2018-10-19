@@ -16,6 +16,7 @@ namespace VirtualityBusCard.Controllers
             ViewBag.Title = "小风谷";
             var virtualityBusCardMessageUser= unitOfWork.VirtualityBusCardMessageUserRepository.Get();
             var virtualityBusCardUser = unitOfWork.VirtualityBusCardUserRepository.Get();
+            var weChatAppletAppidAppSecret = unitOfWork.WeChatAppletAppidAppSecretRepository.Get();
             return View();
         }
     }
